@@ -54,25 +54,25 @@ WinterTiledMapTileLayerCell class >> rotate90 [
 	^ Rotate90
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTileLayerCell >> flipHorizontally [
 
 	^ flipHorizontally 
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTileLayerCell >> flipHorizontally: aBoolean [
 
 	flipHorizontally := aBoolean 
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTileLayerCell >> flipVertically [
 
 	^ flipVertically  
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTileLayerCell >> flipVertically: aBoolean [
 
 	flipVertically := aBoolean
@@ -87,25 +87,25 @@ WinterTiledMapTileLayerCell >> initializeOf: aTile flippingHorizontally: anHoriz
 	rotation := aRotation
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTileLayerCell >> rotation [
 
 	^ rotation   
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTileLayerCell >> rotation: aNumber [
 
 	rotation := aNumber 
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTileLayerCell >> tile [
 
 	^ tile
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTileLayerCell >> tile: aTile [
 
 	tile := aTile 

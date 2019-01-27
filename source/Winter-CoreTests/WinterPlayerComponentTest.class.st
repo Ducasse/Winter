@@ -4,7 +4,7 @@ Class {
 	#category : 'Winter-CoreTests'
 }
 
-{ #category : #'Test Support' }
+{ #category : #'test support' }
 WinterPlayerComponentTest >> collisionShapeOn: aGame [
 
 	^Winter2DCircle
@@ -14,25 +14,25 @@ WinterPlayerComponentTest >> collisionShapeOn: aGame [
 		in: aGame.
 ]
 
-{ #category : #'Test Support' }
+{ #category : #'test support' }
 WinterPlayerComponentTest >> game [
 
 	^self
 ]
 
-{ #category : #'Test Support' }
+{ #category : #'test support' }
 WinterPlayerComponentTest >> position [
 
 	^200@200
 ]
 
-{ #category : #'Test Support' }
+{ #category : #'test support' }
 WinterPlayerComponentTest >> scene [
 
 	^self 
 ]
 
-{ #category : #Tests }
+{ #category : #tests }
 WinterPlayerComponentTest >> testAccessing [
 
 	| component game scene collisionShape position|

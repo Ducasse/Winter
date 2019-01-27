@@ -28,7 +28,7 @@ Winter2DCircleTest >> testAccessing [
 		color: Color red
 		in: game.
 		
-	circle scene: game scene .		
+	circle scene: game scene.		
 	
 	self
 		assert: circle bounds equals: (250 @ 530 extent: 15 @ 15);

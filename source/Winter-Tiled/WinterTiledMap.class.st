@@ -13,13 +13,13 @@ Class {
 	#category : 'Winter-Tiled'
 }
 
-{ #category : #Managing }
+{ #category : #properties }
 WinterTiledMap >> addLayer: aLayer [
 
 	layers add: aLayer
 ]
 
-{ #category : #Managing }
+{ #category : #properties }
 WinterTiledMap >> addTileSet: aTileSet [
 
 	tileSets  add: aTileSet
@@ -27,56 +27,56 @@ WinterTiledMap >> addTileSet: aTileSet [
 
 { #category : #initialization }
 WinterTiledMap >> initialize [
-
+	super initialize.
 	layers := OrderedCollection new.
 	properties := Dictionary new.
 	tileSets  := OrderedCollection new.
-	resources := OrderedCollection new.
+	resources := OrderedCollection new
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMap >> layers [
 
 	^ layers  
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMap >> properties [
 
 	^ properties values 
 ]
 
-{ #category : #Managing }
+{ #category : #properties }
 WinterTiledMap >> propertiesAt: aKey [
 
 	^properties at: aKey
 ]
 
-{ #category : #Managing }
+{ #category : #properties }
 WinterTiledMap >> propertiesAt: aKey put: aValue [
 
 	properties at: aKey put: aValue
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMap >> resources [
 
 	^resources
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMap >> resources: aResourcesCollection [ 
 
 	resources := aResourcesCollection.
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMap >> tileSets [
 
 	^ tileSets 
 ]
 
-{ #category : #Managing }
+{ #category : #properties }
 WinterTiledMap >> tilesAt: anId [
 
 	^tileSets  detect: [:each | each hasTileWithId: anId]  ifFound: [ :tileSet | tileSet tilesAt: anId  ]  ifNone: [ nil ]

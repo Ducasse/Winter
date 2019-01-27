@@ -24,7 +24,7 @@ WinterPolygonMapObject >> initializeOf: aPolygon atX: anX andY: anY [
 	y := anY
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterPolygonMapObject >> polygon [
 
 	^ polygon

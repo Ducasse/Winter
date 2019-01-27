@@ -43,7 +43,7 @@ WinterTextureRegion class >> of: aTexture x: aNumber y: anotherNumber width: aWi
 		height: aHeight
 ]
 
-{ #category : #Flipping }
+{ #category : #flipping }
 WinterTextureRegion >> flipX: aBoolean [
 
 	aBoolean
@@ -54,7 +54,7 @@ WinterTextureRegion >> flipX: aBoolean [
 		ifFalse: [ "Do nothing" ]
 ]
 
-{ #category : #Flipping }
+{ #category : #flipping }
 WinterTextureRegion >> flipY: aBoolean [
 
 	aBoolean
@@ -79,25 +79,25 @@ invertedTextureWidth := 1.0 / aTexture width .
 	regionHeight := aHeight abs
 ]
 
-{ #category : #Testing }
+{ #category : #testing }
 WinterTextureRegion >> isFlippedX [
 
 	^ u > u2
 ]
 
-{ #category : #Testing }
+{ #category : #testing }
 WinterTextureRegion >> isFlippedY [
 
 	^ v > v2
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTextureRegion >> regionHeight [
 
 	^ regionHeight
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTextureRegion >> regionHeight: anInteger [
 
 	self isFlippedY
@@ -105,13 +105,13 @@ WinterTextureRegion >> regionHeight: anInteger [
 		ifFalse: [ self v2: (v + anInteger) / texture height  asFloat ]
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTextureRegion >> regionWidth [
 
 	^ regionWidth 
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTextureRegion >> regionWidth: anInteger [
 
 	self isFlippedX
@@ -119,26 +119,26 @@ WinterTextureRegion >> regionWidth: anInteger [
 		ifFalse: [ self u2: (u + anInteger) / texture width asFloat ]
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTextureRegion >> regionX [
 
 	^ u * texture width roundTo: 0.1
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTextureRegion >> regionX: anInteger [
 
 	self u: (anInteger/ texture width asFloat )
 
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTextureRegion >> regionY [
 
 	^ v * texture height  roundTo: 0.1
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTextureRegion >> regionY: anInteger [
 
 	self v: (anInteger/ texture height  asFloat )
@@ -177,64 +177,64 @@ WinterTextureRegion >> setRegionUsingU: aPartialUValue v: aPartialVValue u2: aPa
 	v2 := partialV2
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTextureRegion >> texture [
 
 	^ texture
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTextureRegion >> texture: aTexture [
 
 	texture := aTexture 
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTextureRegion >> u [
 
 	^ u
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTextureRegion >> u2 [
 
 	^ u2
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTextureRegion >> u2: aFloat [
 
 	u2 := aFloat.
 	regionWidth := (u2 - u) abs * texture width roundTo: 0.1
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTextureRegion >> u: aFloat [
 
 	u := aFloat.
 	regionWidth := (u2 - u) abs * texture width roundTo: 0.1
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTextureRegion >> v [
 
 	^ v
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTextureRegion >> v2 [
 
 	^ v2
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTextureRegion >> v2: aFloat [
 
 	v2 := aFloat.
 	regionHeight  := (v2 - v) abs * texture height  roundTo: 0.1
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTextureRegion >> v: aFloat [
 
 	v := aFloat.

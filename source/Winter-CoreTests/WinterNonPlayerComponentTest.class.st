@@ -4,35 +4,35 @@ Class {
 	#category : 'Winter-CoreTests'
 }
 
-{ #category : #'Test Support' }
+{ #category : #'test support' }
 WinterNonPlayerComponentTest >> collisionShapeOn: aGame [
 
-	^Winter2DCircle
+	^ Winter2DCircle
 		ofCenter: 250 @ 530
 		radius: 15
 		color: Color red
-		in: aGame.
+		in: aGame
 ]
 
-{ #category : #'Test Support' }
+{ #category : #'test support' }
 WinterNonPlayerComponentTest >> game [
 
-	^self
+	^ self
 ]
 
-{ #category : #'Test Support' }
+{ #category : #'test support' }
 WinterNonPlayerComponentTest >> position [
 
-	^200@200
+	^ 200@200
 ]
 
-{ #category : #'Test Support' }
+{ #category : #'test support' }
 WinterNonPlayerComponentTest >> scene [
 
-	^self 
+	^ self 
 ]
 
-{ #category : #Tests }
+{ #category : #tests }
 WinterNonPlayerComponentTest >> testAccessing [
 
 	| component game scene collisionShape position|

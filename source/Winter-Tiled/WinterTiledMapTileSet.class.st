@@ -18,7 +18,7 @@ WinterTiledMapTileSet class >> named: aName [
 	^ self new initializeNamed: aName
 ]
 
-{ #category : #Testing }
+{ #category : #testing }
 WinterTiledMapTileSet >> hasTileWithId: anId [
 
 	^ tiles includesKey: anId
@@ -27,6 +27,7 @@ WinterTiledMapTileSet >> hasTileWithId: anId [
 { #category : #initialization }
 WinterTiledMapTileSet >> initialize [
 
+	super initialize.
 	name := String new.
 	tiles := Dictionary new.
 	properties := Dictionary new
@@ -56,25 +57,25 @@ WinterTiledMapTileSet >> properties [
 	^ properties 
 ]
 
-{ #category : #Managing }
+{ #category : #'tiles access' }
 WinterTiledMapTileSet >> propertiesAt: aKey [
 
 	^properties  at: aKey 
 ]
 
-{ #category : #Managing }
+{ #category : #'tiles access' }
 WinterTiledMapTileSet >> propertiesAt: aKey put: aProperty [
 
 	properties  at: aKey put: aProperty 
 ]
 
-{ #category : #Managing }
+{ #category : #'tiles access' }
 WinterTiledMapTileSet >> tilesAt: anId [
 
 	^tiles at: anId 
 ]
 
-{ #category : #Managing }
+{ #category : #'tiles access' }
 WinterTiledMapTileSet >> tilesAt: anId put: aTile [
 
 	tiles at: anId put: aTile 

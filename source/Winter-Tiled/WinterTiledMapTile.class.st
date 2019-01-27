@@ -22,7 +22,7 @@ WinterTiledMapTile class >> of: aTextureRegion havingOffsetX: aNumber andOffsetY
 
 { #category : #initialization }
 WinterTiledMapTile >> initialize [
-
+	super initialize.
 	mapObjects := OrderedCollection new.
 	mapProperties := OrderedCollection new
 ]
@@ -35,61 +35,61 @@ WinterTiledMapTile >> initializeOf: aTextureRegion havingOffsetX: aNumber andOff
 	offSetY := anotherNumber
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTile >> mapObjects [
 	
 	^ mapObjects
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTile >> mapObjects: aMapObjectsCollection [
 	
 	mapObjects := aMapObjectsCollection
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTile >> mapProperties [
 	
 	^ mapProperties 
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTile >> mapProperties: aMapPropertiesCollection [
 	
 	mapProperties := aMapPropertiesCollection
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTile >> offSetX [
 	
 	^ offSetX
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTile >> offSetX: aNumber [
 	
 	offSetX := aNumber
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTile >> offSetY [
 	
 	^ offSetY
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTile >> offSetY: aNumber [
 	
 	offSetY := aNumber
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTile >> textureRegion [
 	
 	^ textureRegion
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTile >> textureRegion: aTextureRegion [
 	
 	textureRegion := aTextureRegion

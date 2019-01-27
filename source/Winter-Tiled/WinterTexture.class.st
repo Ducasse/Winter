@@ -15,20 +15,20 @@ WinterTexture class >> from: aFileReference [
 	^ self new initializeFrom: aFileReference
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTexture >> height [
 
 	^ image height
 ]
 
-{ #category : #Initialization }
+{ #category : #initialization }
 WinterTexture >> initializeFrom: aFileReference [
 
 	image := aFileReference 
 		binaryReadStreamDo: [ :stream | ImageReadWriter formFromStream: stream ]
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTexture >> width [
 
 	^ image width

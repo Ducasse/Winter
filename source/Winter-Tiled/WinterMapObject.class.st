@@ -15,19 +15,19 @@ Class {
 	#category : 'Winter-Tiled'
 }
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterMapObject >> color [
 
 	^ color
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterMapObject >> color: aColor [
 
 	color := aColor
 ]
 
-{ #category : #Drawing }
+{ #category : #drawing }
 WinterMapObject >> drawOn: aCanvas [
 
 	self flag: 'Should draw?'
@@ -42,61 +42,61 @@ WinterMapObject >> initialize [
 	color := Color white
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterMapObject >> name [
 
 	^ name
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterMapObject >> name: aName [
 
 	 name := aName
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterMapObject >> opacity [
 
 	^ opacity
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterMapObject >> opacity: aFloat [
 
 	opacity := aFloat 
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterMapObject >> visible [
 
 	^ visible
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterMapObject >> visible: aBoolean [
 
 	visible := aBoolean 
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterMapObject >> x [
 
 	^ x
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterMapObject >> x: anX [
 
 	x := anX
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterMapObject >> y [
 
 	^ y
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterMapObject >> y: anY [
 
 	y := anY

@@ -41,7 +41,7 @@ WinterTiledMapLoader class >> loadFromPath: aStringPath [
 			[ :ex | (ex messageText: ('TiledMap not found in <1s>' expandMacrosWith: aStringPath)) signal ]
 ]
 
-{ #category : #'Parsing - Layers' }
+{ #category : #'parsing - Layers' }
 WinterTiledMapLoader >> createTileLayerCellOf: aTile consideringFlagFlippingHorizontally: aFlipHorizontallyFlag flagFlippingVertically: aFlipVerticallyFlag andFlagFlippingDiagonally: aFlipDiagonallyFlag [
 	
 	| horizontally vertically rotation |
@@ -65,7 +65,7 @@ WinterTiledMapLoader >> createTileLayerCellOf: aTile consideringFlagFlippingHori
 		rotating: rotation
 ]
 
-{ #category : #'Parsing - Tilesets' }
+{ #category : #'parsing - Tilesets' }
 WinterTiledMapLoader >> createTilesFrom: xmlElement startingId: firstgid imageWidth: imageWidth imageHeight: imageHeight tileHeight: tileHeight tileWidth: tileWidth offsetX: offsetX offsetY: offsetY spacing: spacing margin: margin image: image imageSource: imageSource andLoadIn: tileset [
 	| x stopWidth id tileElements tileImageWidth tileRegion textureRegion tileImageHeight y tileImageSource tile stopHeight tileImage |
 	image
@@ -130,7 +130,7 @@ WinterTiledMapLoader >> imageFrom: imagePathString [
 	^ imagePathString asFileReference 
 ]
 
-{ #category : #Initialization }
+{ #category : #initialization }
 WinterTiledMapLoader >> initialize [
 
 	flipY := true.
@@ -140,13 +140,13 @@ WinterTiledMapLoader >> initialize [
 	mapHeightInPixels := 0
 ]
 
-{ #category : #Initialization }
+{ #category : #initialization }
 WinterTiledMapLoader >> initializeFromPath: aPath [
 
 	xmlParsed := aPath asFileReference binaryReadStreamDo: [ :stream | stream parseXML ]
 ]
 
-{ #category : #'Parsing - Layers' }
+{ #category : #'parsing - Layers' }
 WinterTiledMapLoader >> loadBasicLayerInfoIn: aLayer using: aLayerElement [
 
 	| name opacity visible offsetX offsetY |
@@ -165,7 +165,7 @@ WinterTiledMapLoader >> loadBasicLayerInfoIn: aLayer using: aLayerElement [
 		offsetY: offsetY
 ]
 
-{ #category : #'Parsing - Tilesets' }
+{ #category : #'parsing - Tilesets' }
 WinterTiledMapLoader >> loadImageForTilesUsing: aTileSheetElement from: source [
 	| offsetElement offsetX margin name tileHeight imageElement tileWidth spacing imageWidth xmlElement offsetY image imageHeight imageSource |
 	source
@@ -204,7 +204,7 @@ WinterTiledMapLoader >> loadImageForTilesUsing: aTileSheetElement from: source [
 					image := imageSource asFileReference ] ]
 ]
 
-{ #category : #'Parsing - Layers' }
+{ #category : #'parsing - Layers' }
 WinterTiledMapLoader >> loadImageLayer: aLayerElement in: aMap [
 
 	| x y image source textureRegion layer properties |
@@ -247,7 +247,7 @@ WinterTiledMapLoader >> loadImageLayer: aLayerElement in: aMap [
 		ifFalse: [ "Do nothing" ]
 ]
 
-{ #category : #'Parsing - Layers' }
+{ #category : #'parsing - Layers' }
 WinterTiledMapLoader >> loadLayer: aLayerElement in: aMap [
 
 	| name |
@@ -263,7 +263,7 @@ WinterTiledMapLoader >> loadLayer: aLayerElement in: aMap [
 		ifTrue: [ self loadImageLayer: aLayerElement in: aMap ]
 ]
 
-{ #category : #'Parsing - Layers' }
+{ #category : #'parsing - Layers' }
 WinterTiledMapLoader >> loadObject: anObjectElement in: aLayer considering: aMap [
 
 	| scaleX scaleY x y width height points vertices point polyline polygon gid id flipHorizontally flipVertically tile rotation type properties tiledMapTileMapObject textureRegion objectWidth objectHeight |
@@ -403,7 +403,7 @@ WinterTiledMapLoader >> loadObject: anObjectElement in: aLayer considering: aMap
 		ifFalse: [ "Do nothing" ]
 ]
 
-{ #category : #'Parsing - Layers' }
+{ #category : #'parsing - Layers' }
 WinterTiledMapLoader >> loadObjectGroup: aLayerElement in: aMap [
 
 	| layer properties objects |
@@ -440,7 +440,7 @@ WinterTiledMapLoader >> loadProperties: aPropertiesElement in: aMapOrLayerOrMapO
 				ifFalse: [ "Do nothing" ] ]
 ]
 
-{ #category : #'Parsing - Layers' }
+{ #category : #'parsing - Layers' }
 WinterTiledMapLoader >> loadTileGroup: aLayerElement in: aMap [
 
 	| groupLayer properties |
@@ -457,7 +457,7 @@ WinterTiledMapLoader >> loadTileGroup: aLayerElement in: aMap [
 		ifFalse: [ "Do nothing" ]
 ]
 
-{ #category : #'Parsing - Layers' }
+{ #category : #'parsing - Layers' }
 WinterTiledMapLoader >> loadTileLayer: aLayerElement in: aMap [
 
 	| width height tileWidth tileHeight layer ids y x id flipHorizontally flipVertically flipDiagonally tile cell properties |
@@ -504,7 +504,7 @@ WinterTiledMapLoader >> loadTileLayer: aLayerElement in: aMap [
 			aMap addLayer: layer ]
 ]
 
-{ #category : #'Parsing - Tilesets' }
+{ #category : #'parsing - Tilesets' }
 WinterTiledMapLoader >> loadTileSet: aTileSetElement in: aMap [
 	(aTileSetElement attributeAt: #name) = #tileset
 		ifTrue:
@@ -574,7 +574,7 @@ WinterTiledMapLoader >> loadTileSet: aTileSetElement in: aMap [
 			 ]
 ]
 
-{ #category : #'Parsing - Layers' }
+{ #category : #'parsing - Layers' }
 WinterTiledMapLoader >> propertyAccordingToName: aName value: aValue andType: aType [
 
 	^ aType
@@ -602,7 +602,7 @@ WinterTiledMapLoader >> propertyAccordingToName: aName value: aValue andType: aT
 												signal: ('Wrong type given for property <1s>, given : <2s>, supported : string, bool, int, float, color' expandMacrosWith: aName with: aType) ] ] ] ] ]
 ]
 
-{ #category : #Parsing }
+{ #category : #parsing }
 WinterTiledMapLoader >> textureFiles [
 	| images tileSetsElement |
 	images := OrderedCollection new.
@@ -615,7 +615,7 @@ WinterTiledMapLoader >> textureFiles [
 	^ images
 ]
 
-{ #category : #'Parsing - Tilesets' }
+{ #category : #'parsing - Tilesets' }
 WinterTiledMapLoader >> tileIdsFrom: aLayerElement accordingToWidth: aWidth height: aHeight [
 	
 	| dataElement encoding ids datas compression inputStream byteArray y x readBytePosition nextReadBytesPosition |
@@ -664,7 +664,7 @@ WinterTiledMapLoader >> tileIdsFrom: aLayerElement accordingToWidth: aWidth heig
 						ifFalse: [ Error signal: ('Unrecognised encoding ( <1s> ) for TMX Layer Data' expandMacrosWith: encoding) ] ] ]
 ]
 
-{ #category : #Parsing }
+{ #category : #parsing }
 WinterTiledMapLoader >> tiledMap [
 
 	| map tileSets layers mapOrientation mapWidth mapHeight tileWidth tileHeight hexSideLength staggerAxis staggerIndex  mapBackgroundColor  |

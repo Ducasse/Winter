@@ -24,25 +24,25 @@ WinterTiledMapTileMapObject class >> from: aTile horizontally: flagFlipHorizonta
 	^ self new initializeFrom: aTile horizontally: flagFlipHorizontally vertically: flagFlipVertically
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTileMapObject >> flipHorizontally [
 
 	^ flipHorizontally 
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTileMapObject >> flipHorizontally: aBoolean [
 
 	flipHorizontally := aBoolean
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTileMapObject >> flipVertically [
 
 	^ flipVertically
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTileMapObject >> flipVertically: aBoolean [
 
 	flipVertically  := aBoolean
@@ -73,73 +73,73 @@ WinterTiledMapTileMapObject >> initializeFrom: aTile horizontally: flagFlipHoriz
 		flipY: flipVertically
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTileMapObject >> originX [
 
 	^ originX
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTileMapObject >> originX: aNumber [
 
 	originX := aNumber
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTileMapObject >> originY [
 
 	^ originY
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTileMapObject >> originY: aNumber [
 
 	originY := aNumber
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTileMapObject >> rotation [
 
 	^ rotation
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTileMapObject >> rotation: aNumber [
 
 	rotation := aNumber
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTileMapObject >> scaleX [
 
 	^ scaleX
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTileMapObject >> scaleX: aNumber [
 
 	scaleX := aNumber
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTileMapObject >> scaleY [
 
 	^ scaleY
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTileMapObject >> scaleY: aNumber [
 
 	scaleY := aNumber
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTileMapObject >> textureRegion [
 
 	^ textureRegion 
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTileMapObject >> tile [
 
 	^ tile

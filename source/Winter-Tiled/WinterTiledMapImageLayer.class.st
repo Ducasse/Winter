@@ -18,7 +18,7 @@ WinterTiledMapImageLayer class >> of: aTextureRegion atX: anX andAtY: anY [
 	^ self new initializeOf: aTextureRegion atX: anX andAtY: anY
 ]
 
-{ #category : #Drawing }
+{ #category : #drawing }
 WinterTiledMapImageLayer >> drawOn: aCanvas [
 
 	| batchColor color vertices region x1 y1 x2 y2 u1 v1 u2 v2 |
@@ -83,37 +83,37 @@ WinterTiledMapImageLayer >> initializeOf: aTextureRegion atX: anX andAtY: anY [
 	y := anY
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapImageLayer >> textureRegion [
 
 	^textureRegion
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapImageLayer >> textureRegion: aTextureRegion [
 
 	textureRegion := aTextureRegion 
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapImageLayer >> x [
 
 	^ x
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapImageLayer >> x: anX [
 
 	x := anX
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapImageLayer >> y [
 
 	^ y
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapImageLayer >> y: anY [
 
 	y := anY

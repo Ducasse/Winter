@@ -24,7 +24,7 @@ WinterPolylineMapObject >> initializeOf: aPolyline atX: anX andY: anY [
 	y := anY
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterPolylineMapObject >> polyline [
 
 	^ polyline

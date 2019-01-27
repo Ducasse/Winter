@@ -16,7 +16,7 @@ WinterEllipseMapObject class >> of: anEllipse [
 	^ self new initializeOf: anEllipse
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterEllipseMapObject >> ellipse [
 
 	^ ellipse

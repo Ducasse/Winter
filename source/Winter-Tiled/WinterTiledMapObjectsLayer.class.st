@@ -10,13 +10,13 @@ Class {
 	#category : 'Winter-Tiled'
 }
 
-{ #category : #Managing }
+{ #category : #'adding/removing' }
 WinterTiledMapObjectsLayer >> addObject: aMapObject [
 
 	objects add: aMapObject
 ]
 
-{ #category : #Drawing }
+{ #category : #drawing }
 WinterTiledMapObjectsLayer >> drawOn: aCanvas [
 
 	"Objcts should be kind of WinterMapObject"
@@ -31,13 +31,13 @@ WinterTiledMapObjectsLayer >> initialize [
 	objects := OrderedCollection new
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapObjectsLayer >> objects [
 
 	^ objects
 ]
 
-{ #category : #Managing }
+{ #category : #'adding/removing' }
 WinterTiledMapObjectsLayer >> removeObject: aMapObject [
 
 	objects remove: aMapObject

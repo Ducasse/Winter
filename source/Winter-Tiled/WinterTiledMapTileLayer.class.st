@@ -24,13 +24,13 @@ WinterTiledMapTileLayer class >> ofWidth: width height: height tileWidth: tileWi
 		tileHeight: tileHeight
 ]
 
-{ #category : #Managing }
+{ #category : #cells }
 WinterTiledMapTileLayer >> cellsAtX: anX andY: anY [
 
 	^ cells at: anX at: anY ifInvalid: nil 
 ]
 
-{ #category : #Managing }
+{ #category : #cells }
 WinterTiledMapTileLayer >> cellsAtX: anX andY: anY put: aCell [
 
 	(anX between: 1 and: width)
@@ -41,7 +41,7 @@ WinterTiledMapTileLayer >> cellsAtX: anX andY: anY put: aCell [
 	cells at: anX at: anY put: aCell
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTileLayer >> height [
 
 	^ height
@@ -57,19 +57,19 @@ WinterTiledMapTileLayer >> initializeOfWidth: aWidth height: aHeight tileWidth: 
 	cells := Matrix rows: height columns: width
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTileLayer >> tileHeight [
 
 	^ tileHeight  
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTileLayer >> tileWidth [
 
 	^ tileWidth   
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTileLayer >> width [
 
 	^ width 

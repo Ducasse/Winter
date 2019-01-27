@@ -87,13 +87,13 @@ Winter2DSquareTest >> testIntersectsACircle [
 		color: Color red
 		in: game.
 		
-	self assert: (square intersects: circle )
+	self assert: (square intersects: circle)
 ]
 
 { #category : #Tests }
 Winter2DSquareTest >> testIntersectsAnotherSquare [
 
-	| game  square anotherSquare|
+	| game  square anotherSquare |
 
 	game := self game.
 	square := Winter2DSquare
@@ -107,5 +107,5 @@ Winter2DSquareTest >> testIntersectsAnotherSquare [
 		color: Color red
 		in: game.	
 			
-	self assert: (square intersects: anotherSquare )
+	self assert: (square intersects: anotherSquare)
 ]

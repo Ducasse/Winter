@@ -10,13 +10,13 @@ Class {
 	#category : 'Winter-Tiled'
 }
 
-{ #category : #Managing }
+{ #category : #layers }
 WinterTiledMapTileGroupLayer >> addLayer: aLayer [
 
 	layers add: aLayer
 ]
 
-{ #category : #Drawing }
+{ #category : #drawing }
 WinterTiledMapTileGroupLayer >> drawOn: aCanvas [
 
 	layers do: [ :layer | layer drawOn: aCanvas ]
@@ -25,17 +25,17 @@ WinterTiledMapTileGroupLayer >> drawOn: aCanvas [
 { #category : #initialization }
 WinterTiledMapTileGroupLayer >> initialize [
 
-	super initialize .
+	super initialize.
 	layers := OrderedCollection new
 ]
 
-{ #category : #Accessing }
+{ #category : #accessing }
 WinterTiledMapTileGroupLayer >> layers [
 
 	^ layers
 ]
 
-{ #category : #Managing }
+{ #category : #layers }
 WinterTiledMapTileGroupLayer >> removeLayer: aLayer [
 
 	layers remove: aLayer
